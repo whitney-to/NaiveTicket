@@ -22,12 +22,17 @@ Work through all these exercises. You edit this file with your answers for these
 
 ### Exercise 2.2
 * What value is returned if you check the machine’s balance after it has printed a ticket?
+0
 
 ### Exercise 2.3
 * Experiment with inserting different amounts of money before printing tickets.
 	* Do you notice anything strange about the machine’s behavior?
 	* What happens if you insert too much money into the machine – do you receive any refund?
 	* What happens if you do not insert enough and then try to print a ticket?
+
+Yes, the machine's behavior is not working as a real life one, also it does not work as expected when the amount of money inputed is not the same as the price. 
+
+When you insert less than or more than the amount required and print the ticket, your inserted money is reset to 0 and ticket will just get printed every time you call printTicket() no matter the amount inputed. 
 
 ### Exercise 2.4
 * Try to obtain a good understanding of a ticket machine’s behavior by interacting with it on the object bench before we start looking at how the `TicketMachine` class is implemented in the next section.
@@ -37,8 +42,18 @@ Work through all these exercises. You edit this file with your answers for these
 	* Buy a ticket from that machine.
 	* Does the printed ticket look different?
 
+The behavior is similar while printing out the ticket will have different price displayed as the one that was used to initialize the object.
+
 ### Exercise 2.6
 * Write out what you think the outer wrappers of the `Student` and `LabClass` classes might look like – do not worry about the inner part.
+
+public class Student {
+    inner part
+}
+
+public class LabClass{
+    innner part
+}
 
 ### Exercise 2.7
 Does it matter whether we write<br>
@@ -47,21 +62,50 @@ or<br>
 `class public TicketMachine`<br>
 in the outer wrapper of a class?
 
+yes it does, there will be error if writing 'class public ..' instead of 'public class ...'
+
 * Edit the source of the `TicketMachine` class to make the change and then close the editor window.
 	* Do you notice a change in the class diagram?
 	* What error message do you get when you now press the compile button?
 	* Do you think this message clearly explains what is wrong?
 
+On the diagram, the name of class TicketMachine is changed into 'public', also red lines shown within the boxes in the diagram.
+
+When press on compile, “class, interface or enum expected” error appeared.
+
+I think that the message does not clearly explain why the program is errored out.
+
 ### Exercise 2.8
 * Check whether or not it is possible to leave out the word `public` from the outer wrapper of the `TicketMachine` class.
+
+It is possible to leave out the word public from the outer wrapper of the class.
 
 ### Exercise 2.9
 * From your earlier experimentation with the ticket machine objects within BlueJ you can probably remember the names of some of the methods – `printTicket`, for instance.
 	* Look at the class definition in Code 2.1 and use this knowledge, along with the additional information about ordering we have given you, to try to make a list of the names of the fields, constructors, and methods in the `TicketMachine` class.
 	* Hint: There is only one constructor in the class.
 
+fields:
+    - price
+    - balance
+    - total
+    - ticketNumber
+
+constructor: 'public TicketMachine(Integer ticketCost) {...}'
+
+methods:
+    - getPrice
+    - getTicketNumber
+    - getBalance
+    - insertMoney
+    - increaseTicketNumber
+    - printTicket
+
+
 ### Exercise 2.10
 * Do you notice any features of the constructor that make it significantly different from the other methods of the class?
+
+structurely, a constructor does not define a return type while method has to include the return type or it has void if method does not return anything.
 
 ### Exercise 2.11
 * What do you think is the type of each of the following fields?
@@ -72,6 +116,12 @@ private Student representative;
 private Server host;
 ```
 
+count is of type integer (primitive type)
+
+representative is of type Student (reference type)
+
+host is of type Server (reference type)
+
 ### Exercise 2.12
 * What are the names of the following fields?
 
@@ -80,6 +130,9 @@ private boolean alive;
 private Person tutor;
 private Game game;
 ```
+
+name of fields are 'alive', 'tutor', 'game'.
+
 ### Exercise 2.13
 
 In the following field declaration from the TicketMachine class<br>
@@ -94,14 +147,21 @@ possible?
 	* Check by pressing the compile button to see if there is an error message.
 	* Make sure that you reinstantiate the original version after your experiments!
 
+it matters the ordering of the givin line of code. If to change the order around, error will occur.
+
 ### Exercise 2.14
 * Is it always necessary to have a semicolon at the end of a field declaration?
 * Once again, experiment via the editor.
 * The rule you will learn here is an important one, so be sure to remember it.
 
+It is always necessary to have a semicolon at the end of a field declaration, it will error out otherwise
 
 ### Exercise 2.15
 * Write in full the declaration for a field of type `int` whose name is `status`.
+
+```java
+public int status;
+```
 
 ### Exercise 2.16
 * To what class does the following constructor belong?
@@ -109,14 +169,30 @@ possible?
 public Student(String name)
 ```
 
+The above constructor belong to the class named 'Student'
+
 ### Exercise 2.17
 * How many parameters does the following constructor have and what are their types?
 ```
 public Book(String title, double price)
 ```
 
+There are 2 parameters (title and price).
+
+title is of type String, and price is of type double.
+
+
 ### Exercise 2.18
 * Can you guess what types some of the `Book` class’s fields might be?
 * Can you assume anything about the names of its fields?
+```java
+private String title;
+private Author author; //maybe have a class Author to have author's attributes such as name, etc.
+private Integer numberOfPages;
+private Integer numberBooksSold;
+private boolean isHardCovered;
+```
+
+
 
 READ upto and INCLUDING section 2.15 of this chapter.
