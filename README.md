@@ -107,7 +107,7 @@ methods:
 ### Exercise 2.10
 * Do you notice any features of the constructor that make it significantly different from the other methods of the class?
 
-structurely, a constructor does not define a return type while method has to include the return type or it has void if method does not return anything.
+structurely, a constructor does not define a return type while method has to include the return type or it has void if method does not return anything. constructor has to have the same name as class name and constructor will be run when an object (of that class) is instantiated. 
 
 ### Exercise 2.11
 * What do you think is the type of each of the following fields?
