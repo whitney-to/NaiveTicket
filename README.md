@@ -87,20 +87,21 @@ It is possible to leave out the word public from the outer wrapper of the class.
 	* Hint: There is only one constructor in the class.
 
 fields:
-    - price
-    - balance
-    - total
-    - ticketNumber
+    * price
+    * balance
+    * total
+    * ticketNumber
 
 constructor: 'public TicketMachine(Integer ticketCost) {...}'
+	* TicketMachine
 
 methods:
-    - getPrice
-    - getTicketNumber
-    - getBalance
-    - insertMoney
-    - increaseTicketNumber
-    - printTicket
+    * getPrice
+    * getTicketNumber
+    * getBalance
+    * insertMoney
+    * increaseTicketNumber
+    * printTicket
 
 
 ### Exercise 2.10
