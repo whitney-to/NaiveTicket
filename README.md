@@ -72,7 +72,7 @@ yes it does, there will be error if writing 'class public ..' instead of 'public
 
 On the diagram, the name of class TicketMachine is changed into 'public', also red lines shown within the boxes in the diagram.
 
-When press on compile, “class, interface or enum expected” error appeared.
+When press on compile, “class, interface or enum expected” error and <identifier> expected error appeared.
 
 I think that the message does not clearly explain why the program is errored out.
 
