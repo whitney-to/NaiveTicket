@@ -162,7 +162,7 @@ It is always necessary to have a semicolon at the end of a field declaration, it
 * Write in full the declaration for a field of type `int` whose name is `status`.
 
 ```java
-public int status;
+private int status;
 ```
 
 ### Exercise 2.16
@@ -187,14 +187,10 @@ title is of type String, and price is of type double.
 ### Exercise 2.18
 * Can you guess what types some of the `Book` class’s fields might be?
 * Can you assume anything about the names of its fields?
-```java
-private String title;
-private Author author; //maybe have a class Author to have author's attributes such as name, etc.
-private Integer numberOfPages;
-private Integer numberBooksSold;
-private boolean isHardCovered;
-```
 
+some of the Book class's fields might be of type String and double just based on the parameters passed into the constructor.
+	
+I cannot assume anything about the names of its fields.
 
 
 READ upto and INCLUDING section 2.15 of this chapter.
